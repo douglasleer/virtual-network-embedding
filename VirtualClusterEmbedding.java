@@ -252,7 +252,7 @@ public class VirtualClusterEmbedding {
 				System.out.print(" ");
 			}
 			System.out.println();
-		}	
+		}
 	}
 
 	private static double idealOptimalBandwidthUsage(DataCenter dc, VirtualClusterSet vcs) {
@@ -263,8 +263,9 @@ public class VirtualClusterEmbedding {
 			sumOfRequest += vcs.al.get(i).n;
 		}
 		
-		if (sumOfRequest > dc.r*dc.n*dc.s)
+		if (sumOfRequest > dc.r*dc.n*dc.s) {
 			return -1; // not a valid placement.
+		}
 		
 		int[] numOfRackSpan = new int[vcs.size];
 		for (int i = 0; i < vcs.size; ++i) {
@@ -342,8 +343,9 @@ public class VirtualClusterEmbedding {
 			sumOfRequest += vcs.al.get(i).n;
 		}
 		
-		if (sumOfRequest > dc.r * dc.n * dc.s)
+		if (sumOfRequest > dc.r * dc.n * dc.s) {
 			return -1; // not a valid placement.
+		}
 		
 		int j = 0;
 		int[] numOfRackSpan = new int[vcs.size];
@@ -365,8 +367,7 @@ public class VirtualClusterEmbedding {
 				dc.rackList.get(maxIndex).remaining = 
 						dc.rackList.get(maxIndex).remaining - vcs.al.get(j).remaining;
 				++j;
-			}
-			else {
+			} else {
 				// do not increase j, because we still need to consider it.
 				vcs.al.get(j).remaining = vcs.al.get(j).remaining
 						- dc.rackList.get(maxIndex).remaining;
@@ -404,8 +405,9 @@ public class VirtualClusterEmbedding {
 			sumOfRequest += vcs.al.get(i).n;
 		}
 		
-		if (sumOfRequest > dc.r * dc.n * dc.s)
+		if (sumOfRequest > dc.r * dc.n * dc.s) {
 			return -1; // not a valid placement.
+		}
 		ArrayList<VirtualCluster> vcl = new ArrayList<VirtualCluster>();
 		// for backup.
 		for (int i = 0; i < vcs.size; ++i) {
@@ -430,8 +432,9 @@ public class VirtualClusterEmbedding {
 			sumOfRequest += vcs.al.get(i).n;
 		}
 		
-		if (sumOfRequest > dc.r * dc.n * dc.s)
-			return -1;	
+		if (sumOfRequest > dc.r * dc.n * dc.s) {
+			return -1;
+		}
 		
 		FileWriter fw = null;
 		try {
