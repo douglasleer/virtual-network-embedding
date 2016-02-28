@@ -11,7 +11,7 @@ public class VirtualClusterSet {
 		Random randomGenerator = new Random();
 		size = n;
 		al = new ArrayList<VirtualCluster>();
-		for (int i = 0; i < n; i ++) {
+		for (int i = 0; i < n; ++i) {
 			int num = nLow + randomGenerator.nextInt(nHigh - nLow);
 			double bandwidth = bLow + randomGenerator.nextDouble() * (bHigh - bLow);
 			VirtualCluster vc = new VirtualCluster(num, bandwidth);
@@ -22,7 +22,7 @@ public class VirtualClusterSet {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < al.size(); i ++) {
+		for(int i = 0; i < al.size(); ++i) {
 			sb.append(al.get(i).n);
 			sb.append(" ");
 			sb.append(al.get(i).b);
