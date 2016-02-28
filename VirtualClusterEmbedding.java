@@ -53,7 +53,7 @@ public class VirtualClusterEmbedding {
 			// 3 : worst fit with sort
 			// 4 : combined
 			// 5 : combined with sort
-			for (int i = 0; i < METHOD_COUNT; i ++) {
+			for (int i = 0; i < METHOD_COUNT; ++i) {
 				bandwidthUsage[i] = 0;
 			}
 			
@@ -119,7 +119,7 @@ public class VirtualClusterEmbedding {
 			// 3 : worst fit with sort
 			// 4 : combined
 			// 5 : combined with sort
-			for (int i = 0; i < METHOD_COUNT; i ++) {
+			for (int i = 0; i < METHOD_COUNT; ++i) {
 				bandwidthUsage[i] = 0;
 			}
 			
@@ -225,7 +225,7 @@ public class VirtualClusterEmbedding {
 			// 3 : worst fit with sort
 			// 4 : combined
 			// 5 : combined with sort
-			for (int i = 0; i < METHOD_COUNT; i ++) {
+			for (int i = 0; i < METHOD_COUNT; ++i) {
 				bandwidthUsage[i] = 0;
 			}
 			
@@ -330,7 +330,7 @@ public class VirtualClusterEmbedding {
 		for (int k = 0; k < vcs.size; ++k) {
 			vcs.al.get(k).remaining = vcs.al.get(k).n;
 		}
-		for (int k = 0; k < dc.rackList.size(); k ++) {
+		for (int k = 0; k < dc.rackList.size(); ++k) {
 			dc.rackList.get(k).remaining = dc.n * dc.s;
 		}		
 		return bandwidth;
@@ -371,7 +371,7 @@ public class VirtualClusterEmbedding {
 				vcs.al.get(j).remaining = vcs.al.get(j).remaining
 						- dc.rackList.get(maxIndex).remaining;
 				dc.rackList.get(maxIndex).remaining = 0;
-				numOfRackSpan[j] ++;
+				++numOfRackSpan[j];
 			}
 		}
 		
