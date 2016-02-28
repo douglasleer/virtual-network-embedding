@@ -14,7 +14,7 @@ public class DataCenter {
 		this.n = n;
 		this.s = s;
 		rackList = new ArrayList<Rack>();
-		for (int i = 0; i < r; i ++) {
+		for (int i = 0; i < r; ++i) {
 			Rack aRack = new Rack(n, s, i);
 			rackList.add(aRack);
 		}
@@ -27,7 +27,7 @@ public class DataCenter {
 		sb.append("The number of core switches, racks, servers (in a rack), and VMs (in a server):\n");
 		sb.append(m); sb.append(" "); sb.append(r); sb.append(" "); sb.append(n); sb.append(" ");
 		sb.append(s); sb.append("\n"); 
-		for (int i = 0; i < r; i ++) {
+		for (int i = 0; i < r; ++i) {
 			sb.append(rackList.get(i).toString());
 			sb.append("\n");
 		}
