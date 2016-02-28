@@ -12,4 +12,4 @@ VirtualCluster.java
 VirtualClusterSet.java
 
 VirtualClusterEmbedding.java is the main simulation file. The goal of the project is to find the better virtual cluster
-embedding algorithm such that the core bandwidth usage of the multicast-capable cluster is minimized.
+embedding algorithm such that the core bandwidth usage of all the multicast-capable virtual clusters is minimized.
